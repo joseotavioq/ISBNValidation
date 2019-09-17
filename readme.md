@@ -11,19 +11,15 @@ An example of a valid ISBN is: **0-306-40615-2**.
 1. The first 9 digits are used to represent varies fields and the 10th digit is a checksum to ensure that the ISBN is a valid one. 
 The formula for calculating the ISBN checksum is defined as:
 
-$$
-x_{10} = (1x_1 + 2x_2 + 3x_3 + 4x_4 + 5x_5 + 6x_6 + 7x_7 + 8x_8 + 9x_9)~mod~11 
-$$
+![equation](http://latex.codecogs.com/gif.latex?x_%7B10%7D%20%3D%20%281x_1%20&plus;%202x_2%20&plus;%203x_3%20&plus;%204x_4%20&plus;%205x_5%20&plus;%206x_6%20&plus;%207x_7%20&plus;%208x_8%20&plus;%209x_9%29%7Emod%7E11)
 
 In the ISBN above
 
-$1*0 + 2*3 + 3*0 + 4*6 + 5*4 + 6*0 + 7*6 + 8*1 + 9*5 = 145~mod~11 = 2$.
+![equation](http://latex.codecogs.com/gif.latex?1*0%20&plus;%202*3%20&plus;%203*0%20&plus;%204*6%20&plus;%205*4%20&plus;%206*0%20&plus;%207*6%20&plus;%208*1%20&plus;%209*5%20%3D%20145%7Emod%7E11%20%3D%202)
 
 The following gives exactly the same result as the formula above.
 
-$$
-x_{10} = \sum\limits_{i=1}^{9} ix_i~mod~11
-$$
+![equation](http://latex.codecogs.com/gif.latex?x_%7B10%7D%20%3D%20%5Csum%5Climits_%7Bi%3D1%7D%5E%7B9%7D%20ix_i%7Emod%7E11)
 
 2. Where the checksum comes to an exact value of 10, then an “X” or “x” is used to represent that in the ISBN code.
 	Example: 030-000-009-X is ok.
