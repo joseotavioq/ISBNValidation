@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISBNValidation", "ISBNValidation\ISBNValidation.csproj", "{10EAB1B3-3ADB-4A53-83C7-F2B1CBDA5097}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISBNValidation.Test", "ISBNValidation.Test\ISBNValidation.Test.csproj", "{C6B3DCB9-D8CC-4F48-B9F2-84A988C0C282}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10EAB1B3-3ADB-4A53-83C7-F2B1CBDA5097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10EAB1B3-3ADB-4A53-83C7-F2B1CBDA5097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10EAB1B3-3ADB-4A53-83C7-F2B1CBDA5097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10EAB1B3-3ADB-4A53-83C7-F2B1CBDA5097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6B3DCB9-D8CC-4F48-B9F2-84A988C0C282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B3DCB9-D8CC-4F48-B9F2-84A988C0C282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B3DCB9-D8CC-4F48-B9F2-84A988C0C282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B3DCB9-D8CC-4F48-B9F2-84A988C0C282}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18D5871F-EA5C-42C7-B90C-A5FFA3BD1651}
+	EndGlobalSection
+EndGlobal
