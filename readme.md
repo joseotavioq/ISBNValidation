@@ -10,14 +10,17 @@ An example of a valid ISBN is: **0-306-40615-2**.
 
 1. The first 9 digits are used to represent varies fields and the 10th digit is a checksum to ensure that the ISBN is a valid one. 
 The formula for calculating the ISBN checksum is defined as:
+
 $$
 x_{10} = (1x_1 + 2x_2 + 3x_3 + 4x_4 + 5x_5 + 6x_6 + 7x_7 + 8x_8 + 9x_9)~mod~11 
 $$
 
 In the ISBN above
+
 $1*0 + 2*3 + 3*0 + 4*6 + 5*4 + 6*0 + 7*6 + 8*1 + 9*5 = 145~mod~11 = 2$.
 
 The following gives exactly the same result as the formula above.
+
 $$
 x_{10} = \sum\limits_{i=1}^{9} ix_i~mod~11
 $$
@@ -49,14 +52,23 @@ As a result, I added the BenchmarkDotNet nuget package to this project, to measu
 | ValidatorSecondTry | 47.46 ns | 1.069 ns | 3.135 ns | 0.006 | 0.0153 | - | - | 64 B |
 
 **Legends**
+
 *Mean*: Arithmetic mean of all measurements
+
 *Error*: Half of 99.9% confidence interval
+
 *StdDev*: Standard deviation of all measurements
+
 *Ratio*: Mean of the ratio distribution ([Current]/[Baseline])
+
 *Gen 0*: GC Generation 0 collects per 1000 operations
+
 *Gen 1*: GC Generation 1 collects per 1000 operations
+
 *Gen 2*: GC Generation 2 collects per 1000 operations
+
 *Allocated*: Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+
 *1 ns*: 1 Nanosecond (0.000000001 sec)
 
 More information about the results is available at: [BenchmarkDotNet Results](https://benchmarkdotnet.org/articles/overview.html#benchmark-results)
