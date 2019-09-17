@@ -5,6 +5,10 @@ namespace ISBNValidation
     [MemoryDiagnoser]
     public class Validator
     {
+        private const string VALID_ISBN = "0-306-40615-2";
+        private const string INVALID_ISBN = "0-306-40615-4";
+        private const string LARGE_INPUT = "1111-111111111111111111111111111111111111111111111111111111111111-111111111111111111111111111111111111111111111111111-1111111111111111111111";
+
         private ValidatorBaseline baseline = new ValidatorBaseline();
         private ValidatorFirstTry firstTry = new ValidatorFirstTry();
         private ValidatorSecondTry secondTry = new ValidatorSecondTry();
@@ -20,21 +24,30 @@ namespace ISBNValidation
         }
 
         [Benchmark(Baseline = true)]
-        public void Baseline()
+        [Arguments(VALID_ISBN)]
+        [Arguments(INVALID_ISBN)]
+        [Arguments(LARGE_INPUT)]
+        public void Baseline(string isbn)
         {
-            baseline.IsValidIsbn("0-306-40615-2");
+            baseline.IsValidIsbn(isbn);
         }
 
         [Benchmark]
-        public void ValidatorFirstTry()
+        [Arguments(VALID_ISBN)]
+        [Arguments(INVALID_ISBN)]
+        [Arguments(LARGE_INPUT)]
+        public void ValidatorFirstTry(string isbn)
         {
-            firstTry.IsValidIsbn("0-306-40615-2");
+            firstTry.IsValidIsbn(isbn);
         }
 
         [Benchmark]
-        public void ValidatorSecondTry()
+        [Arguments(VALID_ISBN)]
+        [Arguments(INVALID_ISBN)]
+        [Arguments(LARGE_INPUT)]
+        public void ValidatorSecondTry(string isbn)
         {
-            secondTry.IsValidIsbn("0-306-40615-2");
+            secondTry.IsValidIsbn(isbn);
         }
     }
 }

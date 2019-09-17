@@ -41,11 +41,19 @@ From this baseline, I increased the performance of it creating the "ValidatorFir
 
 As a result, I added the BenchmarkDotNet nuget package to this project, to measure the performance and memory allocation, as follows:
 
-| Method | Mean | Error | StdDev | Ratio | Gen 0 | Gen 1 | Gen 2 | Allocated |
-|--|--|--|--|--|--|--|--|--|
-| Baseline | 8,322.05 ns | 165.754 ns | 258.059 ns | 1.000 | 0.4120 | - | - | 1731 B |
-| ValidatorFirstTry | 548.61 ns | 12.893 ns | 38.016 ns | 0.065 | 0.0410 | - | - | 172 B |
-| ValidatorSecondTry | 47.46 ns | 1.069 ns | 3.135 ns | 0.006 | 0.0153 | - | - | 64 B |
+| Method | ISBN param | Mean | Error | StdDev | Ratio | Gen 0 | Gen 1 | Gen 2 | Allocated |
+|--|--|--|--|--|--|--|--|--|--|
+|           Baseline |         0-306-40615-2 |  7,993.01 ns |  55.7478 ns |  49.4190 ns | 1.000 | 0.4120 |     - |     - |    1731 B |
+|  ValidatorFirstTry |         0-306-40615-2 |    489.09 ns |   9.6915 ns |  17.7214 ns | 0.060 | 0.0410 |     - |     - |     172 B |
+| ValidatorSecondTry |         0-306-40615-2 |     34.30 ns |   0.7214 ns |   1.3550 ns | 0.004 |      - |     - |     - |         - |
+|                    |                       |              |             |             |       |        |       |       |           |
+|           Baseline |         0-306-40615-4 |  8,258.80 ns | 164.7530 ns | 365.0813 ns | 1.000 | 0.4120 |     - |     - |    1731 B |
+|  ValidatorFirstTry |         0-306-40615-4 |    503.24 ns |   5.7282 ns |   5.0779 ns | 0.062 | 0.0410 |     - |     - |     172 B |
+| ValidatorSecondTry |         0-306-40615-4 |     32.58 ns |   0.6682 ns |   0.6251 ns | 0.004 |      - |     - |     - |         - |
+|                    |                       |              |             |             |       |        |       |       |           |
+|           Baseline | 1111-(...)11111 [140] | 15,163.52 ns | 267.9899 ns | 250.6779 ns | 1.000 | 0.5493 |     - |     - |    2324 B |
+|  ValidatorFirstTry | 1111-(...)11111 [140] |  1,413.60 ns |  28.2643 ns |  62.6318 ns | 0.091 | 0.5093 |     - |     - |    2143 B |
+| ValidatorSecondTry | 1111-(...)11111 [140] |     27.69 ns |   0.4192 ns |   0.3501 ns | 0.002 |      - |     - |     - |         - |
 
 **Legends**
 

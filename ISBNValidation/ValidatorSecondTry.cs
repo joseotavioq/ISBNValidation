@@ -5,19 +5,20 @@ namespace ISBNValidation
 {
     public class ValidatorSecondTry
     {
+        //O(1) - space complexity
         //O(n) - time complexity
         public bool IsValidIsbn(string isbn)
         {
-            int[] numbers = new int[isbn.Length];
             int indexOfNumbers = 0;
             int numberOfDashes = 0;
             int lastDashFound = -1;
+            int lastDigit = 0;
             int checksum = 0;
 
             //O(n)
             for (int i = 0; i < isbn.Length; i++)
             {
-                char currentChar = isbn[i];
+                int currentChar = isbn[i]; //O(1)
 
                 if (currentChar == 45) //45 = '-'
                 {
@@ -33,26 +34,29 @@ namespace ISBNValidation
                 }
                 else
                 {
-                    if (currentChar == 88 || currentChar == 120) // X or x
-                        numbers[indexOfNumbers++] = 10;
-                    else if (currentChar >= 48 && currentChar <= 57)  //if is number
-                        numbers[indexOfNumbers++] = currentChar - 48; //48 = '0'
+                    int currentValue = -1;
 
-                    if (indexOfNumbers < 10)
-                        checksum += indexOfNumbers * numbers[indexOfNumbers - 1]; //O(1)
-                    else if (indexOfNumbers > 10)
-                        return false;
+                    if (currentChar == 88 || currentChar == 120) // X or x
+                        currentValue = 10;
+                    else if (currentChar >= 48 && currentChar <= 57) //if is number
+                        currentValue = currentChar - 48; //48 = '0'
+
+                    if (currentValue > -1)
+                    {
+                        indexOfNumbers++;
+                        lastDigit = currentValue;
+                        if (indexOfNumbers < 10)
+                            checksum += indexOfNumbers * currentValue; //O(1)
+                        else if (indexOfNumbers > 10)
+                            return false;
+                    }
                 }
             }
-
-            checksum %= 11;
 
             if (!(numberOfDashes == 0 || numberOfDashes == 3))
                 return false;
 
-            int lastDigit = numbers[indexOfNumbers - 1];
-
-            return (checksum == lastDigit);
+            return ((checksum % 11) == lastDigit);
         }
     }
 }
