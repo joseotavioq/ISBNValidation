@@ -15,15 +15,16 @@
 | Validator_vafzamora | 1111-(...)11111 [140] | 26.96 ns | 0.2832 ns | 0.2511 ns | 0.002 | - | - | - | - |
 
 **Legends**
-*Mean*: Arithmetic mean of all measurements
-*Error*: Half of 99.9% confidence interval
-*StdDev*: Standard deviation of all measurements
-*Ratio*: Mean of the ratio distribution ([Current]/[Baseline])
-*Gen 0*: GC Generation 0 collects per 1000 operations
-*Gen 1*: GC Generation 1 collects per 1000 operations
-*Gen 2*: GC Generation 2 collects per 1000 operations
-*Allocated*: Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
-*1 ns*: 1 Nanosecond (0.000000001 sec)
+
+**Mean**: Arithmetic mean of all measurements
+**Error**: Half of 99.9% confidence interval
+**StdDev**: Standard deviation of all measurements
+**Ratio**: Mean of the ratio distribution ([Current]/[Baseline])
+**Gen 0**: GC Generation 0 collects per 1000 operations
+**Gen 1**: GC Generation 1 collects per 1000 operations
+**Gen 2**: GC Generation 2 collects per 1000 operations
+**Allocated**: Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+**1 ns**: 1 Nanosecond (0.000000001 sec)
 
 More information about the results is available at: [BenchmarkDotNet Results](https://benchmarkdotnet.org/articles/overview.html#benchmark-results)
 
