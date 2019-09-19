@@ -11,14 +11,16 @@ namespace ISBNValidation
 
         private ValidatorBaseline baseline = new ValidatorBaseline();
         private ValidatorWithImprovements performanceImprovements = new ValidatorWithImprovements();
+        private Validator_vafzamora vafzamora = new Validator_vafzamora();
 
         //For Unit Test Only
         public bool IsValidIsbn(string isbn)
         {
             bool first = baseline.IsValidIsbn(isbn);
             bool second = performanceImprovements.IsValidIsbn(isbn);
+            bool third = vafzamora.IsValidIsbn(isbn);
 
-            return first && second;
+            return first && second && third;
         }
 
         [Benchmark(Baseline = true)]
@@ -37,6 +39,15 @@ namespace ISBNValidation
         public void ValidatorWithImprovements(string isbn)
         {
             performanceImprovements.IsValidIsbn(isbn);
+        }
+
+        [Benchmark]
+        [Arguments(VALID_ISBN)]
+        [Arguments(INVALID_ISBN)]
+        [Arguments(LARGE_INPUT)]
+        public void Validator_vafzamora(string isbn)
+        {
+            vafzamora.IsValidIsbn(isbn);
         }
     }
 }

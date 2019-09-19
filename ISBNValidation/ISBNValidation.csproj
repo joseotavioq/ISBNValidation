@@ -231,6 +231,7 @@
     <Compile Include="Validator.cs" />
     <Compile Include="ValidatorWithImprovements.cs" />
     <Compile Include="ValidatorBaseline.cs" />
+    <Compile Include="Validator_vafzamora.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -2,14 +2,17 @@
 
 | Method | ISBN param | Mean | Error | StdDev | Ratio | Gen 0 | Gen 1 | Gen 2 | Allocated |
 |--|--|--|--|--|--|--|--|--|--|
-| Baseline | 0-306-40615-2 | 8,294.61 ns | 164.4277 ns | 424.4403 ns | 8,163.44 ns | 1.000 | 0.4120 | - | - | 1731 B |
-| ValidatorWithImprovements | 0-306-40615-2 | 33.13 ns | 0.5801 ns | 0.6447 ns | 33.34 ns | 0.004 | - | - | - | - |
-| | | | | | | | | | | |
-| Baseline | 0-306-40615-4 | 8,147.24 ns | 160.9012 ns | 281.8055 ns | 8,107.21 ns | 1.000 | 0.4120 | - | - | 1731 B |
-| ValidatorWithImprovements | 0-306-40615-4 | 35.10 ns | 1.0115 ns | 1.2422 ns | 35.04 ns | 0.004 | - | - | - | - |
-| | | | | | | | | | | |
-| Baseline | 1111-(...)11111 [140] | 15,298.22 ns | 294.1940 ns | 431.2257 ns | 15,322.49 ns | 1.000 | 0.5493 | - | - | 2324 B |
-| ValidatorWithImprovements | 1111-(...)11111 [140] | 29.03 ns | 0.5589 ns | 0.8365 ns | 28.90 ns | 0.002 | - | - | - | - |
+| Baseline | 0-306-40615-2 | 8,729.26 ns | 163.2073 ns | 160.2914 ns | 1.000 | 0.4120 | - | - | 1731 B |
+| ValidatorWithImprovements | 0-306-40615-2 | 36.89 ns | 0.7732 ns | 1.5262 ns | 0.004 | - | - | - | - |
+| Validator_vafzamora | 0-306-40615-2 | 30.81 ns | 0.5791 ns | 0.5417 ns | 0.004 | - | - | - | - |
+| | | | | | | | | | |
+| Baseline | 0-306-40615-4 | 8,695.16 ns | 133.8281 ns | 118.6351 ns | 1.000 | 0.4120 | - | - | 1731 B |
+| ValidatorWithImprovements | 0-306-40615-4 | 35.82 ns | 0.5326 ns | 0.4721 ns | 0.004 | - | - | - | - |
+| Validator_vafzamora | 0-306-40615-4 | 30.86 ns | 0.4597 ns | 0.4300 ns | 0.004 | - | - | - | - |
+| | | | | | | | | | |
+| Baseline | 1111-(...)11111 [140] | 16,347.38 ns | 210.2670 ns | 175.5824 ns | 1.000 | 0.5493 | - | - | 2324 B |
+| ValidatorWithImprovements | 1111-(...)11111 [140] | 29.75 ns | 0.4976 ns | 0.4654 ns | 0.002 | - | - | - | - |
+| Validator_vafzamora | 1111-(...)11111 [140] | 26.96 ns | 0.2832 ns | 0.2511 ns | 0.002 | - | - | - | - |
 
 **Legends**
 *Mean*: Arithmetic mean of all measurements
