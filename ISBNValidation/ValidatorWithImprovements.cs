@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace ISBNValidation
 {
-    public class ValidatorSecondTry
+    public class ValidatorWithImprovements
     {
         //O(1) - space complexity
         //O(n) - time complexity

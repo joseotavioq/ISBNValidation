@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2036
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISBNValidation", "ISBNValidation\ISBNValidation.csproj", "{10EAB1B3-3ADB-4A53-83C7-F2B1CBDA5097}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISBNValidation.Test", "ISBNValidation.Test\ISBNValidation.Test.csproj", "{C6B3DCB9-D8CC-4F48-B9F2-84A988C0C282}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISBNValidation.Test", "ISBNValidation.Test\ISBNValidation.Test.csproj", "{C6B3DCB9-D8CC-4F48-B9F2-84A988C0C282}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D9F908D7-D0B2-4ACF-8A90-96E8B0C4A0BE}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

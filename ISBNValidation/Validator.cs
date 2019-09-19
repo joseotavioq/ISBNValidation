@@ -10,17 +10,15 @@ namespace ISBNValidation
         private const string LARGE_INPUT = "1111-111111111111111111111111111111111111111111111111111111111111-111111111111111111111111111111111111111111111111111-1111111111111111111111";
 
         private ValidatorBaseline baseline = new ValidatorBaseline();
-        private ValidatorFirstTry firstTry = new ValidatorFirstTry();
-        private ValidatorSecondTry secondTry = new ValidatorSecondTry();
+        private ValidatorWithImprovements performanceImprovements = new ValidatorWithImprovements();
 
         //For Unit Test Only
         public bool IsValidIsbn(string isbn)
         {
             bool first = baseline.IsValidIsbn(isbn);
-            bool second = firstTry.IsValidIsbn(isbn);
-            bool third = secondTry.IsValidIsbn(isbn);
+            bool second = performanceImprovements.IsValidIsbn(isbn);
 
-            return first && second && third;
+            return first && second;
         }
 
         [Benchmark(Baseline = true)]
@@ -36,18 +34,9 @@ namespace ISBNValidation
         [Arguments(VALID_ISBN)]
         [Arguments(INVALID_ISBN)]
         [Arguments(LARGE_INPUT)]
-        public void ValidatorFirstTry(string isbn)
+        public void ValidatorWithImprovements(string isbn)
         {
-            firstTry.IsValidIsbn(isbn);
-        }
-
-        [Benchmark]
-        [Arguments(VALID_ISBN)]
-        [Arguments(INVALID_ISBN)]
-        [Arguments(LARGE_INPUT)]
-        public void ValidatorSecondTry(string isbn)
-        {
-            secondTry.IsValidIsbn(isbn);
+            performanceImprovements.IsValidIsbn(isbn);
         }
     }
 }
